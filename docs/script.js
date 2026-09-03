@@ -1,4 +1,3 @@
-// Smooth scroll for CTA button
 document.querySelector(".cta")?.addEventListener("click", () => {
     document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
 });
