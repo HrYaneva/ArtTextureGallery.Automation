@@ -99,17 +99,15 @@ body {
     color: #dcdcff;
 }
 
-.fade-in {
+.section, .card {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeIn 1.2s forwards;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.section.show, .card.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .grid {
@@ -133,6 +131,7 @@ body {
     display: block;
     border-radius: 18px;
     transition: transform 0.5s ease;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -142,28 +141,6 @@ body {
 
 .card:hover img {
     transform: scale(1.15);
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #aaa;
-    margin-top: 40px;
-}
-
-.gallery img {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
 }
 
 .lightbox {
@@ -194,13 +171,9 @@ footer {
     to { transform: scale(1); opacity: 1; }
 }
 
-.section, .card {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.section.show, .card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255,
