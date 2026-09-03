@@ -36,19 +36,23 @@ body {
 }
 
 .hero {
-    text-align: center;
-    padding: 120px 20px;
-    background: linear-gradient(135deg, #6a4bc3, #3b1f6b);
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a4bc4, #3b2a6f);
+  color: white;
+  border-bottom: 2px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
 }
 
 .hero h1 {
-    font-size: 60px;
-    margin: 0;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 .cta {
