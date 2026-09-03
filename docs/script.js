@@ -1,3 +1,4 @@
+// Smooth scroll for CTA button
 document.querySelector(".cta")?.addEventListener("click", () => {
     document.querySelector("#gallery").scrollIntoView({ behavior: "smooth" });
 });
@@ -29,4 +30,34 @@ document.querySelectorAll(".card img").forEach(img => {
             lightbox.remove();
         });
     });
+});
+
+// THEME TOGGLE (Dark / Light)
+const themeBtn = document.querySelector(".theme-toggle");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light-mode");
+    themeBtn.textContent = "☀️";
+}
+
+// Toggle theme
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        localStorage.setItem("theme", "light");
+        themeBtn.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "dark");
+        themeBtn.textContent = "🌙";
+    }
+});
+
+// PREMIUM LOADING ANIMATION
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    setTimeout(() => {
+        loader.classList.add("hide");
+    }, 600);
 });
